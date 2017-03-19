@@ -26,5 +26,6 @@ var fetchDailyData = function(){
 }
 
 
-module.exports.fetchWeeklyData = fetchWeeklyData
+module.exports.fetchWeeklyData = fetchWeeklyData;
+module.exports.fetchDailyData = fetchDailyData;
 

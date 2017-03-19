@@ -1,11 +1,11 @@
 {
   "name": "destinyadvisor",
   "version": "0.0.0",
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "alexa-sdk": "^1.0.7",
     "lodash": "^4.5.1",
-    "request": "^2.75.0",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "request": "^2.75.0"
   }
 }
