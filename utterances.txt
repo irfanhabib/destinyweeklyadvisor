@@ -1,0 +1,2 @@
+FetchWeeklyEvents whats on this week
+FetchDailyEvents whats on today

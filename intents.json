@@ -1,0 +1,19 @@
+{
+    "intents": [
+        {
+            "intent": "FetchWeeklyEvents",
+            "slots": []
+        },
+        {
+            "intent": "FetchDailyEvents",
+            "slots": []
+        },
+        {
+            "intent": "FetchTrials",
+            "slots": []
+        },
+        {
+            "intent": "AMAZON.StopIntent"
+        }
+    ]
+}
