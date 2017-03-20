@@ -1,5 +1,10 @@
 var _ = require('lodash');
 
+/**
+ * Extract Weekly Heroic data
+ * @param advisorData
+ * @returns {{name: string, skulls}}
+ */
 function weeklyHeroics(advisorData) {
 
     var heroicStrike = _.get(advisorData, 'Response.data.heroicStrike');
@@ -20,6 +25,12 @@ function weeklyHeroics(advisorData) {
 }
 
 
+/**
+ * Extract skulls for Weekly Heroic
+ * @param advisorData
+ * @param heroicStrikesHash
+ * @returns {Array}
+ */
 function getSkulls(advisorData, heroicStrikesHash) {
 
     var heroicDefinitions = _.get(advisorData, 'Response.definitions.activities[' + heroicStrikesHash + ']');

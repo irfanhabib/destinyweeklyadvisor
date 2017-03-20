@@ -3,15 +3,13 @@ var Q = require('q');
 var request = require('request');
 
 function getRequestOptions(url){
-    var requestOptions = {
+    return {
         url: url,
         followRedirect: true,
         headers: {
             'X-API-Key': config['X-API-KEY']
         }
     };
-
-    return requestOptions;
 }
 
 module.exports.getRequestOptions = getRequestOptions;

@@ -1,6 +1,11 @@
 var _ = require('lodash');
 
 
+/**
+ * Extract Nightfall details from Advisor Data
+ * @param advisorData
+ * @returns {{name: *, skulls, text}}
+ */
 function nightfallDetails(advisorData) {
     var nightfallData = _.get(advisorData, 'Response.data.nightfall');
 
@@ -14,20 +19,26 @@ function nightfallDetails(advisorData) {
 
     var nightfallText = 'Night fall strike is: ' + strikeDetails.name;
     nightfallText += '. Night fall strike has the following modifiers:';
-    _.each(strikeDetails.skulls, function(skull){
+    _.each(strikeDetails.skulls, function (skull) {
         nightfallText += ' ' + skull.name;
-    })
+    });
     strikeDetails.text = nightfallText;
     return strikeDetails;
 }
 
 
+/**
+ * Extract Skulls for Nightfall strike
+ * @param advisorData
+ * @param nightfallActivityHash
+ * @returns {Array}
+ */
 function getSkulls(advisorData, nightfallActivityHash) {
 
     var nightfallDefinitions = _.get(advisorData, 'Response.definitions.activities.' + nightfallActivityHash);
     var skullsList = _.get(advisorData, 'Response.data.nightfall.tiers[0].skullIndexes');
     var skulls = [];
-    _.each(skullsList, function(skullIndex) {
+    _.each(skullsList, function (skullIndex) {
         skulls.push({
             name: nightfallDefinitions.skulls[skullIndex].displayName,
             desc: nightfallDefinitions.skulls[skullIndex].description
@@ -36,6 +47,6 @@ function getSkulls(advisorData, nightfallActivityHash) {
     return skulls;
 }
 
- 
+
 module.exports.nightfallDetails = nightfallDetails;
 

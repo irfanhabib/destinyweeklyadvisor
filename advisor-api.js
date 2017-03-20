@@ -4,24 +4,31 @@ var crucible = require('./crucible');
 var heroics = require('./heroics');
 var daily = require('./daily');
 
-var fetchWeeklyData = function(){
-    return  advisor.getAdvisor().then(function(advisorData){
+/**
+ * Fetch Weekly Data
+ * @returns {*}
+ */
+var fetchWeeklyData = function () {
+    return advisor.getAdvisor().then(function (advisorData) {
         var nightfallData = nightfall.nightfallDetails(advisorData).text;
         var weeklyCrucible = crucible.weeklyCrucible(advisorData).text;
         var weeklyHeroics = heroics.weeklyHeroics(advisorData).text;
 
-        var text =  nightfallData + ' ' + weeklyHeroics + ' ' + weeklyCrucible;
-        return text;
+        return nightfallData + ' ' + weeklyHeroics + ' ' + weeklyCrucible;
     })
-}
+};
 
-var fetchDailyData = function(){
-    return  advisor.getAdvisor().then(function(advisorData){
+
+/**
+ * Fetch Daily Data
+ * @returns {*}
+ */
+var fetchDailyData = function () {
+    return advisor.getAdvisor().then(function (advisorData) {
         var dailyMission = daily.getDailyMission(advisorData).text;
         var dailyCrucible = daily.getDailyCrucible(advisorData).text;
 
-        var text =  dailyMission + '. ' + dailyCrucible;
-        return text;
+        return dailyMission + '. ' + dailyCrucible;
     })
 }
 
