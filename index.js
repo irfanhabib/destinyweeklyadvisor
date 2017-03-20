@@ -20,9 +20,6 @@ var handlers = {
         AdvisorApi.fetchDailyData().then(function (speechOutput) {
             that.emit(':tell', speechOutput);
         })
-    },
-    'AMAZON.StopIntent': function () {
-        this.emit(':tell', this.t('STOP_MESSAGE'));
     }
 };
 

@@ -15,7 +15,7 @@ function getDailyMission(advisorData) {
 
 
 /**
- * Extract Daily Crucible activity from Advisor Datas
+ * Extract Daily Crucible activity from Advisor Data
  * @param advisorData
  * @returns {{text: string}}
  */

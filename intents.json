@@ -11,9 +11,6 @@
         {
             "intent": "FetchTrials",
             "slots": []
-        },
-        {
-            "intent": "AMAZON.StopIntent"
         }
     ]
 }
