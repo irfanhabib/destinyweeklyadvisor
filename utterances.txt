@@ -1,2 +1,7 @@
-FetchWeeklyEvents whats on this week
-FetchDailyEvents whats on today
+FetchWeeklyEvents what is on this week
+FetchWeeklyEvents get what is on this week
+FetchWeeklyEvents tell me about this week
+
+FetchDailyEvents what is on today
+FetchDailyEvents get what is on today
+FetchDailyEvents tell me about today
