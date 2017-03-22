@@ -1,7 +1,10 @@
 {
   "name": "destinyadvisor",
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "premake-zip": "rm -f destinyadvisor.zip",
+    "make-zip": "zip -r destinyadvisor *"
+  },
   "dependencies": {
     "alexa-sdk": "^1.0.7",
     "lodash": "^4.5.1",

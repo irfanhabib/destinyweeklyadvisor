@@ -1,24 +1,19 @@
 {
   "intents": [
     {
-      "intent": "FetchWeeklyEvents",
-      "slots": []
+      "intent": "FetchWeeklyEvents"
     },
     {
-      "intent": "FetchDailyEvents",
-      "slots": []
+      "intent": "FetchDailyEvents"
     },
     {
-      "intent": "AMAZON.HelpIntent",
-      "slots": []
+      "intent": "AMAZON.HelpIntent"
     },
     {
-      "intent": "AMAZON.StopIntent",
-      "slots": []
+      "intent": "AMAZON.StopIntent"
     },
     {
-      "intent": "AMAZON.CancelIntent",
-      "slots": []
+      "intent": "AMAZON.CancelIntent"
     }
   ]
 }
